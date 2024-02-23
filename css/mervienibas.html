@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Informācijas daudzuma mērvienības</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Informācijas daudzuma mērvienības</div>
+    </body>
+    <form> 
+        <div> 
+            <label for"="gigabaiti"> GB</label>
+            <input type="text" id="gigabaiti" name="GB:">
+            <button onclick="pieraksit('gigabaiti')">Pārvērst</button>
+            
+            
+        </div>
+    <div>
+        <label for="litri">Megabaiti:</label>
+        <input type="text" id="megabaiti" name="MB:">
+        <button onclick="pierakstit('megabaiti')">Pārvērst</button>
+    </div>
+    <div>
+        <label for="galloni">Megabiti:</label>
+        <input type="text" id="megabiti" name="MiB:">
+        <button onclick="pierakstit('megabiti')">Pārvērst</button>
+    </div>
+    </form>
+    
+    
+    <script>
+    function pierakstit(mervieniba) {
+        var ievade = parseFloat(document.getElementById(mervieniba).value);
+        switch(mervieniba) {
+            case 'mililitri':
+                document.getElementById('litri').value = ievade / 1000;
+                document.getElementById('galloni').value = ievade * 0.000264172;
+                break;
+            case 'litri':
+                document.getElementById('mililitri').value = ievade * 1000;
+                document.getElementById('galloni').value = ievade * 0.264172;
+                break;
+            case 'galloni':
+                document.getElementById('mililitri').value = ievade * 3785.41;
+                document.getElementById('litri').value = ievade * 3.78541;
+                break;
+        }
+    }
+</script>
+
+</html>

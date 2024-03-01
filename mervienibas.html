@@ -26,9 +26,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <button onclick="pierakstit('megabaiti')">Pārvērst</button>
     </div>
     <div>
-        <label for="galloni">Megabiti:</label>
-        <input type="text" id="megabiti" name="MiB:">
-        <button onclick="pierakstit('megabiti')">Pārvērst</button>
+        <label for="galloni">Mimibaiti:</label>
+        <input type="text" id="Mimibaiti" name="MiB:">
+        <button onclick="pierakstit('Mimibaiti')">Pārvērst</button>
     </div>
     </form>
     
@@ -37,17 +37,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     function pierakstit(mervieniba) {
         var ievade = parseFloat(document.getElementById(mervieniba).value);
         switch(mervieniba) {
-            case 'mililitri':
-                document.getElementById('litri').value = ievade / 1000;
-                document.getElementById('galloni').value = ievade * 0.000264172;
+            case 'gigabaiti':
+                document.getElementById('megabaiti').value = ievade / 1000;
+                document.getElementById('mimibaiti').value = ievade * 1024000;
                 break;
-            case 'litri':
-                document.getElementById('mililitri').value = ievade * 1000;
-                document.getElementById('galloni').value = ievade * 0.264172;
+            case 'megabaiti':
+                document.getElementById('gigabaiti').value = ievade * 1000;
+                document.getElementById('mimibaiti').value = ievade * 1024;
                 break;
-            case 'galloni':
-                document.getElementById('mililitri').value = ievade * 3785.41;
-                document.getElementById('litri').value = ievade * 3.78541;
+            case 'mibibaiti':
+                document.getElementById('gigabaiti').value = ievade /1024000;
+                document.getElementById('megabaiti').value = ievade / 1024;
                 break;
         }
     }

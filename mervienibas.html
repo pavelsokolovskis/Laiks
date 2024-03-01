@@ -11,7 +11,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </head>
     <body>
         <div>Informācijas daudzuma mērvienības</div>
-    </body>
+
     <form> 
         <div> 
             <label for"="gigabaiti"> GB</label>
@@ -32,10 +32,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </div>
     </form>
     
-    
+        </body>
     <script>
     function pierakstit(mervieniba) {
+        console.log(document.getElementById(mervieniba).value);
+        /*
         var ievade = parseFloat(document.getElementById(mervieniba).value);
+        console.log(ievade);
         switch(mervieniba) {
             case 'gigabaiti':
                 document.getElementById('megabaiti').value = ievade / 1000;
@@ -50,6 +53,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 document.getElementById('megabaiti').value = ievade / 1024;
                 break;
         }
+         * */
+         
     }
 </script>
 

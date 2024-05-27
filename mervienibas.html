@@ -12,25 +12,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <body>
         <div>Informācijas daudzuma mērvienības</div>
 
-    <form> 
-        <div> 
-            <label for"="gigabaiti"> GB</label>
-            <input type="text" id="gigabaiti" name="GB:">
-            <button onclick="pieraksit('gigabaiti')">Pārvērst</button>
-            
-            
-        </div>
-    <div>
-        <label for="litri">Megabaiti:</label>
-        <input type="text" id="megabaiti" name="MB:">
-        <button onclick="pierakstit('megabaiti')">Pārvērst</button>
-    </div>
-    <div>
-        <label for="galloni">Mimibaiti:</label>
-        <input type="text" id="Mimibaiti" name="MiB:">
-        <button onclick="pierakstit('Mimibaiti')">Pārvērst</button>
-    </div>
-    </form>
+   <form>
+          <div><input type="text" name="sk1"> GB </div>
+          
+          <div> <input value="Pārvērst uz MB" onclick="rez.value=sk1.value*1000" type="button"> <input name="rez"> MB </div> 
+        
+    <div> <input value="Pārvērst uz MiB" onclick="reiz.value=sk1.value*953" type="button"> <input name="reiz"> MiB </div>    
+          
+        
+        </form>
     <li> <a href="otra.html">Saite uz laika plānošanas uzdevumu</a></li>
     <li><a href=index.html> Laika plānošanas Rīki un to priekšrocības</a></li>
 
